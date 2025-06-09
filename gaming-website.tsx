@@ -138,28 +138,29 @@ export default function GamingWebsite() {
   </div>
 
   {/* Game Card 3 - 3PATTI DRAGON TIGER CLUB */}
-  <div className="bg-[#131b26] rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-colors">
-    <div className="p-4">
-      <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
-        <img
-          src="/daragon.jpg"
-          alt="3PATTI DRAGON TIGER CLUB"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-    <div className="p-4 flex justify-between items-center">
-      <h3 className="text-xl font-bold">3PATTI DRAGON TIGER CLUB</h3>
-      <a
-        href={downloadUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-yellow-500 text-black px-4 py-2 rounded-md flex items-center font-bold hover:bg-yellow-400 transition-colors"
-      >
-        Download <ArrowRight size={16} className="ml-1" />
-      </a>
+ <div className="bg-[#131b26] rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-colors">
+  <div className="p-4">
+    <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
+      <img
+        src="/daragon.jpg"
+        alt="3PATTI DRAGON TIGER CLUB"
+        className="w-full h-full object-cover"
+      />
     </div>
   </div>
+  <div className="p-4 flex justify-between items-center">
+    <h3 className="text-xl font-bold">3PATTI DRAGON TIGER CLUB</h3>
+    <a
+      href="https://DragonTigerClub.pk?from_gameid=5708126&channelCode=100000"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-yellow-500 text-black px-4 py-2 rounded-md flex items-center font-bold hover:bg-yellow-400 transition-colors"
+    >
+      Download <ArrowRight size={16} className="ml-1" />
+    </a>
+  </div>
+</div>
+
 
 </div>
 
