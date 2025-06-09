@@ -6,6 +6,9 @@ import { ArrowRight, Menu, Check, ChevronRight, Send } from "lucide-react"
 export default function GamingWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // Referral URL for all download buttons
+  const downloadUrl = "https://flyingchess.com?from_gameid=8188019&channelCode=100000"
+
   return (
     <div className="min-h-screen bg-[#0d1117] text-white overflow-hidden">
       {/* Navigation */}
@@ -82,132 +85,90 @@ export default function GamingWebsite() {
       </div>
 
       {/* Games Section */}
-      <div id="games" className="bg-[#0d1117] py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Game Card 1 - 3PATTI FLYING CHESS */}
-            <div className="bg-[#131b26] rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-colors">
-              <div className="p-4">
-                <div className="w-full h-48 bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 rounded-lg flex items-center justify-center relative overflow-hidden">
-                  {/* 3 Patti Card Design */}
-                  <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                  <div className="relative z-10 text-center">
-                    <div className="flex justify-center space-x-2 mb-4">
-                      {/* Playing Cards */}
-                      <div className="w-8 h-12 bg-white rounded-sm flex items-center justify-center text-red-500 font-bold text-lg transform -rotate-12">
-                        A♠
-                      </div>
-                      <div className="w-8 h-12 bg-white rounded-sm flex items-center justify-center text-red-500 font-bold text-lg transform rotate-6">
-                        K♥
-                      </div>
-                      <div className="w-8 h-12 bg-white rounded-sm flex items-center justify-center text-black font-bold text-lg transform -rotate-6">
-                        Q♣
-                      </div>
-                    </div>
-                    <div className="text-white font-bold text-xl">3PATTI</div>
-                    <div className="text-yellow-400 text-sm">FLYING CHESS</div>
-                  </div>
-                  {/* Decorative elements */}
-                  <div className="absolute top-2 right-2 w-6 h-6 bg-yellow-400 rounded-full opacity-70"></div>
-                  <div className="absolute bottom-2 left-2 w-4 h-4 bg-blue-400 rounded-full opacity-50"></div>
-                </div>
-              </div>
-              <div className="p-4 flex justify-between items-center">
-                <h3 className="text-xl font-bold">3PATTI FLYING CHESS</h3>
-                <a
-                  href="#"
-                  className="bg-yellow-500 text-black px-4 py-2 rounded-md flex items-center font-bold hover:bg-yellow-400 transition-colors"
-                >
-                  Download <ArrowRight size={16} className="ml-1" />
-                </a>
-              </div>
-            </div>
+    <div id="games" className="bg-[#0d1117] py-16">
+  <div className="container mx-auto px-4">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {/* Game Card 2 - TEEN PATTI FLYING CHESS */}
-            <div className="bg-[#131b26] rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-colors">
-              <div className="p-4">
-                <div className="w-full h-48 bg-gradient-to-br from-blue-600 via-purple-600 to-red-600 rounded-lg flex items-center justify-center relative overflow-hidden">
-                  {/* Teen Patti Design */}
-                  <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                  <div className="relative z-10 text-center">
-                    <div className="flex justify-center space-x-1 mb-4">
-                      {/* Playing Cards in a fan layout */}
-                      <div className="w-7 h-10 bg-white rounded-sm flex items-center justify-center text-red-500 font-bold text-sm transform -rotate-45">
-                        J♦
-                      </div>
-                      <div className="w-7 h-10 bg-white rounded-sm flex items-center justify-center text-black font-bold text-sm transform -rotate-12">
-                        10♠
-                      </div>
-                      <div className="w-7 h-10 bg-white rounded-sm flex items-center justify-center text-red-500 font-bold text-sm transform rotate-12">
-                        9♥
-                      </div>
-                      <div className="w-7 h-10 bg-white rounded-sm flex items-center justify-center text-black font-bold text-sm transform rotate-45">
-                        8♣
-                      </div>
-                    </div>
-                    <div className="text-white font-bold text-xl">TEEN PATTI</div>
-                    <div className="text-yellow-400 text-sm">FLYING CHESS</div>
-                  </div>
-                  {/* Decorative chips */}
-                  <div className="absolute top-3 left-3 w-8 h-8 bg-red-500 rounded-full border-4 border-white opacity-80"></div>
-                  <div className="absolute bottom-3 right-3 w-6 h-6 bg-blue-500 rounded-full border-2 border-white opacity-70"></div>
-                </div>
-              </div>
-              <div className="p-4 flex justify-between items-center">
-                <h3 className="text-xl font-bold">TEEN PATTI FLYING CHESS</h3>
-                <a
-                  href="#"
-                  className="bg-yellow-500 text-black px-4 py-2 rounded-md flex items-center font-bold hover:bg-yellow-400 transition-colors"
-                >
-                  Download <ArrowRight size={16} className="ml-1" />
-                </a>
-              </div>
-            </div>
-
-            {/* Game Card 3 - 3PATTI DRAGON TIGER CLUB */}
-            <div className="bg-[#131b26] rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-colors">
-              <div className="p-4">
-                <div className="w-full h-48 bg-gradient-to-br from-red-600 via-orange-600 to-yellow-600 rounded-lg flex items-center justify-center relative overflow-hidden">
-                  {/* Dragon Tiger Design */}
-                  <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                  <div className="relative z-10 text-center">
-                    <div className="flex justify-center items-center space-x-4 mb-3">
-                      {/* Dragon Symbol */}
-                      <div className="text-4xl">🐉</div>
-                      <div className="text-white text-2xl font-bold">VS</div>
-                      {/* Tiger Symbol */}
-                      <div className="text-4xl">🐅</div>
-                    </div>
-                    <div className="flex justify-center space-x-2 mb-2">
-                      {/* Cards for Dragon Tiger */}
-                      <div className="w-6 h-9 bg-white rounded-sm flex items-center justify-center text-red-500 font-bold text-xs">
-                        A♦
-                      </div>
-                      <div className="w-6 h-9 bg-white rounded-sm flex items-center justify-center text-black font-bold text-xs">
-                        K♠
-                      </div>
-                    </div>
-                    <div className="text-white font-bold text-lg">3PATTI</div>
-                    <div className="text-yellow-400 text-sm">DRAGON TIGER</div>
-                  </div>
-                  {/* Fire effects */}
-                  <div className="absolute top-2 right-2 text-red-500 text-xl">🔥</div>
-                  <div className="absolute bottom-2 left-2 text-orange-500 text-lg">⚡</div>
-                </div>
-              </div>
-              <div className="p-4 flex justify-between items-center">
-                <h3 className="text-xl font-bold">3PATTI DRAGON TIGER CLUB</h3>
-                <a
-                  href="#"
-                  className="bg-yellow-500 text-black px-4 py-2 rounded-md flex items-center font-bold hover:bg-yellow-400 transition-colors"
-                >
-                  Download <ArrowRight size={16} className="ml-1" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+  {/* Game Card 1 - 3PATTI FLYING CHESS */}
+  <div className="bg-[#131b26] rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-colors">
+    <div className="p-4">
+      <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
+        <img
+          src="/teenpatti.jpeg"
+          alt="3 PATTI FLYING Chess"
+          className="w-full h-full object-cover"
+        />
       </div>
+    </div>
+    <div className="p-4 flex justify-between items-center">
+      <h3 className="text-xl font-bold">3PATTI FLYING CHESS</h3>
+      <a
+        href={downloadUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-yellow-500 text-black px-4 py-2 rounded-md flex items-center font-bold hover:bg-yellow-400 transition-colors"
+      >
+        Download <ArrowRight size={16} className="ml-1" />
+      </a>
+    </div>
+  </div>
+
+  {/* Game Card 2 - TEEN PATTI FLYING CHESS */}
+  <div className="bg-[#131b26] rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-colors">
+    <div className="p-4">
+      <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
+        <img
+          src="/flying.jpg"
+          alt="TEEN PATTI FLYING CHESS"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+    <div className="p-4 flex justify-between items-center">
+      <h3 className="text-xl font-bold">TEEN PATTI FLYING CHESS</h3>
+      <a
+        href={downloadUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-yellow-500 text-black px-4 py-2 rounded-md flex items-center font-bold hover:bg-yellow-400 transition-colors"
+      >
+        Download <ArrowRight size={16} className="ml-1" />
+      </a>
+    </div>
+  </div>
+
+  {/* Game Card 3 - 3PATTI DRAGON TIGER CLUB */}
+  <div className="bg-[#131b26] rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-colors">
+    <div className="p-4">
+      <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
+        <img
+          src="/daragon.jpg"
+          alt="3PATTI DRAGON TIGER CLUB"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+    <div className="p-4 flex justify-between items-center">
+      <h3 className="text-xl font-bold">3PATTI DRAGON TIGER CLUB</h3>
+      <a
+        href={downloadUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-yellow-500 text-black px-4 py-2 rounded-md flex items-center font-bold hover:bg-yellow-400 transition-colors"
+      >
+        Download <ArrowRight size={16} className="ml-1" />
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  </div>
+</div>
+
 
       {/* Top Rated Steamers Section */}
       <div className="bg-[#0d1117] py-16">
@@ -219,12 +180,22 @@ export default function GamingWebsite() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">TOP RATED STEAMERS</h2>
 
             <div className="flex justify-center space-x-4 mb-8">
-              <button className="bg-blue-500 text-white px-6 py-2 rounded-md font-bold hover:bg-blue-400 transition-colors">
+              <a
+                href={downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 text-white px-6 py-2 rounded-md font-bold hover:bg-blue-400 transition-colors"
+              >
                 BUY SKINS
-              </button>
-              <button className="bg-yellow-500 text-black px-6 py-2 rounded-md font-bold hover:bg-yellow-400 transition-colors">
+              </a>
+              <a
+                href={downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-yellow-500 text-black px-6 py-2 rounded-md font-bold hover:bg-yellow-400 transition-colors"
+              >
                 BUY GAMES
-              </button>
+              </a>
             </div>
 
             <div className="flex justify-center space-x-4 mb-12">
@@ -283,12 +254,22 @@ export default function GamingWebsite() {
                     <button className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-gray-500 transition-colors">
                       DISCORD BALL
                     </button>
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-blue-400 transition-colors">
+                    <a
+                      href={downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-blue-400 transition-colors"
+                    >
                       NFT MARKET
-                    </button>
-                    <button className="bg-yellow-500 text-black px-4 py-2 rounded-md text-sm font-bold hover:bg-yellow-400 transition-colors">
+                    </a>
+                    <a
+                      href={downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-yellow-500 text-black px-4 py-2 rounded-md text-sm font-bold hover:bg-yellow-400 transition-colors"
+                    >
                       SUPPORT
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -360,9 +341,14 @@ export default function GamingWebsite() {
                 With Season 1 ending with our play and earn focus, we're now moving to Season 2 where we'll continue to
                 enhance gameplay, build out our open world, and expand the ecosystem with Machine Apps and more.
               </p>
-              <button className="bg-yellow-500 text-black px-8 py-3 rounded-md font-bold flex items-center hover:bg-yellow-400 transition-colors">
+              <a
+                href={downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-yellow-500 text-black px-8 py-3 rounded-md font-bold flex items-center hover:bg-yellow-400 transition-colors w-fit"
+              >
                 EXPLORE <ChevronRight size={20} className="ml-2" />
-              </button>
+              </a>
 
               {/* Blue dot indicator */}
               <div className="hidden lg:block absolute left-1/2 top-1/3 w-2 h-2 bg-blue-500 rounded-full"></div>
